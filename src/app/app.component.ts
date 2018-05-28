@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Qoutes } from './qoutes'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+   quotes =  [
+     new Qoutes ("Kosa","Time is the real enemy" ,"Kaisilius"),
+     new Qoutes ("Muivs","Dread it,run from it....Destiny arrives","Thanos")
+  ]
 }

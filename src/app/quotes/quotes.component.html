@@ -1,0 +1,19 @@
+<div class="jumbotron">
+  <h1><strong>Quotes</strong></h1>
+</div>
+<div class="container-fluid">
+
+<app-quote-form  (addQuote)="addNewQuote($event)"></app-quote-form>
+<div class="row">
+<p>Here are some quotes</p>
+
+<ul *ngFor='let quote of quotes'>
+
+  <li><h4>{{quote.name}}</h4>
+    <p>{{ quote.quote}}</p>
+    <p>by {{quote.author}}</p>
+  </li>
+
+</ul>
+</div>
+</div>
