@@ -16,8 +16,11 @@ export class QuotesComponent implements OnInit {
  addNewQuote(quote){
       this.quotes.push(quote)
   }
+  dislike : number ;
 
-  constructor() { }
+  constructor() {
+  this.dislike = 0;
+   }
 
   ngOnInit() {
   }

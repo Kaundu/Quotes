@@ -1,7 +1,8 @@
+<div class="container-fluid">
 <div class="jumbotron">
   <h1><strong>Quotes</strong></h1>
 </div>
-<div class="container-fluid">
+
 
 <app-quote-form  (addQuote)="addNewQuote($event)"></app-quote-form>
 <div class="row">
@@ -12,6 +13,10 @@
   <li><h4>{{quote.name}}</h4>
     <p>{{ quote.quote}}</p>
     <p>by {{quote.author}}</p>
+    <button type="button" onclick="like(i)" class="btn">Upvote</button>
+    <button type="button" onclick="dislike(i)" class="btn">DownVote</button>
+
+    <!-- <app-quote-dislike></app-quote-dislike> -->
   </li>
 
 </ul>
