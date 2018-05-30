@@ -1,24 +1,24 @@
 <div class="container-fluid">
 <div class="jumbotron">
-  <h1><strong>Quotes</strong></h1>
+  <h1><strong>QUOTES</strong></h1>
 </div>
 
 
 <app-quote-form  (addQuote)="addNewQuote($event)"></app-quote-form>
-<div class="row">
+<div class="row" id="frm">
 <p>Here are some quotes</p>
-
-<ul *ngFor='let quote of quotes'>
-
+<div class="col-md-12">
+<ul *ngFor='let quote of quotes;let i = index'>
+  <div class="disp">
   <li><h4>{{quote.name}}</h4>
     <p>{{ quote.quote}}</p>
     <p>by {{quote.author}}</p>
-    <button type="button" onclick="like(i)" class="btn">Upvote</button>
-    <button type="button" onclick="dislike(i)" class="btn">DownVote</button>
-
-    <!-- <app-quote-dislike></app-quote-dislike> -->
+    <button type="button" (click)="like(i)" class="btn btn-info">Upvote:{{quote.upVotes}}</button>
+    <button type="button" (click)="dislike(i)" class="btn btn-danger">DownVote : {{quote.downVotes}}</button>
   </li>
-
+  <li><button type="button"(click)="quoteDelete(i)" class="btn btn-success">Delete</button>
+</div>
 </ul>
+</div>
 </div>
 </div>

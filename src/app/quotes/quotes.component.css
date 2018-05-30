@@ -1,3 +1,10 @@
 .jumbotron{
   background-color: rgba(242, 230, 115, 0.43)
 }
+.disp{
+  border: solid;
+  background-color: rgba(166, 123, 236, 0.6);
+}
+#frm{
+  text-align: center;
+}

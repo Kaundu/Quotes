@@ -16,10 +16,20 @@ export class QuotesComponent implements OnInit {
  addNewQuote(quote){
       this.quotes.push(quote)
   }
-  dislike : number ;
+  like(i){
+    this.quotes[i].upVotes+=1
+  }
+  dislike(i){
+    this.quotes[i].downVotes+=1
+  }
+  quoteDelete(index){
+   confirm("Do You want to Delete this Quote?")
+    this.quotes.splice(index,1);
+  }
+
 
   constructor() {
-  this.dislike = 0;
+
    }
 
   ngOnInit() {
